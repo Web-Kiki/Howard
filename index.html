@@ -13,7 +13,6 @@
         <title>Howard</title>
     </head>
     <body>
-       
         <nav>
             <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'));document.getElementById('ul').classList.toggle('pictures-open')" aria-label="Main Menu" id="btn">
                 <svg width="100" height="100" viewBox="0 0 100 100">
@@ -29,25 +28,25 @@
                 </ul>
             </div>
         </nav>
-        
-        <video id="video1" width="1080" height="568" autoplay="autoplay" muted="muted">
+        <img src="assets/fond.jpg" id="back" style="width: 100vw; height: 100vh;" alt="">
+        <video id="video1" width="1080" height="568" class="hidden">
             <source src="assets/intro.mp4" type="video/mp4">
             <source src="assets/intro.webm" type="video/webm">
         </video>
-        <audio src="assets/silence.mp3" autoplay="autoplay"></audio>
-        <audio src="assets/intro.ogg" autoplay="autoplay"></audio>
         <video id="video2" width="1080" height="568" class="hidden" loop>
             <source src="assets/sequence.mp4" type="video/mp4">
             <source src="assets/sequence.webm" type="video/webm">
         </video>
-        
+        <div class="div2">
+            <button class="button" onclick="this.classList.toggle('hidden');$('#video1')[0].play();document.getElementById('video1').classList.toggle('hidden2');">
+                <p class="neon">Call Howard</p>
+            </button>
+        </div>
         <div class="div"></div>
-
         <section id="about">
-            <h1>About</h1>
-            <p>Howard is a friendly swagged freestyle dancer you will only meet once !</p>
+            <h1 class="neon">About</h1>
+            <p class="neon">Howard is a friendly swagged freestyle dancer you will only meet once !</p>
         </section>
-    
         <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
         <script> 
             $('#video1').bind('ended', function() {
